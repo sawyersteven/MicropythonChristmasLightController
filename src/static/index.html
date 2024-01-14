@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>LightController</title>
+    <link href="simple.css" rel="stylesheet" type="text/css">
+    <script src="script.js"></script>
+    <data id="sequencelist">{sequencelist}</data>
+</head>
+
+<body>
+    <progress id="refreshTimerBar" max="100"></progress>
+
+    <article>
+        <strong>Now Playing:</strong><br />
+        <input id="currentPlaying" disabled=""></input>
+    </article>
+    <article>
+        <form>
+            <label for="seqSelect">Sequence:</label>
+            <select id="seqSelect" data-sequencelist="{sequencelist}"></select>
+            <label for="speedSelect">Speed:</label>
+            <select default="Normal" id="speedSelect">
+                <option value="2000">Slow</option>
+                <option value="1000" selected>Normal</option>
+                <option value="500">Fast</option>
+            </select>
+            <hr />
+            <button id="btnSetSeq" onclick="setSeq()">Apply</button>
+            <button id="btnSetDefault" onclick="setDefault()">Set Default</button>
+        </form>
+    </article>
+    <footer></footer>
+</body>
+
+</html>
